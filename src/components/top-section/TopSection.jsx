@@ -5,12 +5,15 @@ import TopSectionImg from './TopSectionImg';
 import TopSectionText from './TopSectionText';
 
 const TopSectionStyled = styled.div`
-	position: absolute;
-	width: 1240px;
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 100%;
 	height: 223px;
-	left: 100px;
-	top: 171px;
-	background-color: azure;
+
+	margin-top: 63px;
+
+	border-radius: 25px;
 `;
 
 function TopSection() {

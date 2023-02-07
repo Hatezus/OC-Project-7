@@ -5,12 +5,15 @@ import Logo from './Logo';
 import NavBar from './navbar/NavBar';
 
 const HeaderStyled = styled.header`
-	position: absolute;
-	width: 1240px;
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+
+	width: 100%;
 	height: 68px;
-	left: 100px;
-	top: 40px;
-	background-color: aqua;
+
+	margin-top: 40px;
 `;
 
 function Header() {

@@ -3,6 +3,7 @@ import styled, {createGlobalStyle} from 'styled-components';
 
 import Header from '../components/header/Header';
 import TopSection from '../components/top-section/TopSection';
+import Tag from '../components/Tag';
 
 const GlobalStyle = createGlobalStyle`
 *

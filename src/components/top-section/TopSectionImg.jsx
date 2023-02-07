@@ -1,13 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import img from './image.svg';
+import img from './image.jpg';
 
 const TopSectionImgStyled = styled.div`
-	background: #000000;
-	mix-blend-mode: darken;
-	opacity: 0.3;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+
 	border-radius: 25px;
+
+	& img {
+		border-radius: 25px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 `;
 
 function TopSectionImg({children}) {
