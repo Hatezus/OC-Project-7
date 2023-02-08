@@ -1,97 +1,3 @@
-// import React, {useState} from 'react';
-// import styled from 'styled-components';
-
-// const DropDownStyled = styled.div`
-// 	width: 1023px;
-// 	height: 47px;
-
-// 	background: #ff6060;
-// 	border-radius: 5px;
-
-// 	.topPart {
-// 		height: 100%;
-
-// 		display: flex;
-// 		flex-wrap: wrap;
-
-// 		align-items: center;
-
-// 		font-family: 'Montserrat';
-// 		font-style: normal;
-// 		font-weight: 500;
-// 		font-size: 24px;
-// 		line-height: 142.6%;
-// 		/* or 34px */
-
-// 		display: flex;
-// 		align-items: center;
-
-// 		color: #ffffff;
-
-// 		cursor: pointer;
-// 	}
-
-// 	.arrowBox {
-// 		width: 28px;
-// 		height: 28px;
-// 		background-color: purple;
-
-// 		rotate: 180deg;
-
-// 		margin-left: 90%;
-// 		margin-right: 16px;
-// 		.arrow {
-// 			border: 14px solid transparent;
-// 			border-bottom-color: green;
-// 			display: block;
-// 			width: 0px;
-// 			height: 0px;
-// 		}
-// 	}
-
-// 	.extendedPart {
-// 		display: ${(props) => (props.isOpen ? 'block' : 'none')};
-// 	width: 100%;
-// 	height: fit-content;
-
-// 	background: #f7f7f7;
-// 	border-radius: 5px;
-
-// 	.extendedPartContent {
-// 		font-family: 'Montserrat';
-// 		font-style: normal;
-// 		font-weight: 400;
-// 		font-size: 24px;
-// 		line-height: 142.6%;
-
-// 		color: #ff6060;
-
-// 		padding-top: 36px;
-// 		padding-bottom: 19px;
-// 	}
-// }
-// `;
-
-// function DropDown({DropDownName, DropDownContent}) {
-// 	const [isOpen, setIsOpen] = useState(false);
-
-// 	return (
-// 		<DropDownStyled onClick={() => setIsOpen(!isOpen)}>
-// 			<div className='topPart'>
-// 				{DropDownName}
-// 				<div className='arrowBox'>
-// 					<div className='arrow'></div>
-// 				</div>
-// 			</div>
-// 			<div className='extendedPart'>
-// 				<div className='extendedPartContent'>{DropDownContent}</div>
-// 			</div>
-// 		</DropDownStyled>
-// 	);
-// }
-
-// export default DropDown;
-
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
@@ -124,7 +30,7 @@ const DropdownHeader = styled.div`
 `;
 
 const DropDownArrow = styled.div`
-	padding-left: 920px;
+	padding-left: 92%;
 `;
 const DropdownBody = styled.div`
 	display: ${(props) => (props.isOpen ? 'block' : 'none')};
