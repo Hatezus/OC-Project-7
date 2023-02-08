@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
+import DropDown from '../components/dropDown/DropDown';
 
 import Header from '../components/header/Header';
 import TopSection from '../components/top-section/TopSection';
-import Tag from '../components/Tag';
 
 const GlobalStyle = createGlobalStyle`
 *
@@ -31,7 +31,7 @@ body
 
 const HomdDStyled = styled.section`
 	position: relative;
-	width: 1440px;
+	max-width: 1440px;
 	height: 1024px;
 
 	background: #ffffff;
@@ -43,6 +43,10 @@ function HomeD() {
 			<GlobalStyle />
 			<Header />
 			<TopSection />
+			<DropDown
+				DropDownName='Test'
+				DropDownContent='iuhdsfisdf dfigfuhbs gjhdiofhgji dfopsodàoijdfgio^jdfçi goidfjg oiudjf goijdfgoij dfoijhg oidfjgoijdf  ogpih dfiuhzeioyug ueyrgo ierjguipheio ugipuerhg iuerh iouy bergiouiou ehsguisergiuhfgigjuodijhgfodifgh'
+			/>
 		</HomdDStyled>
 	);
 }
