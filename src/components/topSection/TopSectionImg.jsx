@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import img from './image.jpg';
-
 const TopSectionImgStyled = styled.div`
 	width: 100%;
 	height: 100%;
@@ -20,10 +18,10 @@ const TopSectionImgStyled = styled.div`
 	}
 `;
 
-function TopSectionImg({children}) {
+function TopSectionImg({children, imgSrc}) {
 	return (
 		<TopSectionImgStyled>
-			<img src={img} alt='' />
+			<img src={imgSrc} alt='' />
 			{children}
 		</TopSectionImgStyled>
 	);
