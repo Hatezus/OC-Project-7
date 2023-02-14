@@ -62,7 +62,7 @@ function AboutUsD() {
 		<AboutUsDStyled>
 			<GlobalStyle />
 			<HeaderD />
-			<TopSection imgSrc={topImg} text='' />
+			<TopSection imgSrc={topImg} height={223} />
 			<AboutUsSectionStyled>
 				<DropDownContainer>
 					<Dropdown

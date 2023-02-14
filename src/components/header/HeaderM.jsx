@@ -11,9 +11,11 @@ const HeaderMStyled = styled.header`
 	justify-content: space-between;
 
 	width: 100%;
-	height: 68px;
 
+	margin-bottom: 20px;
 	margin-top: 40px;
+	padding-left: 2%;
+	padding-right: 2%;
 `;
 
 function HeaderM() {

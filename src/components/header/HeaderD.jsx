@@ -14,6 +14,7 @@ const HeaderDStyled = styled.header`
 	height: 68px;
 
 	margin-top: 40px;
+	margin-bottom: 30px;
 	padding-left: 2%;
 	padding-right: 2%;
 `;

@@ -40,16 +40,16 @@ body
 
 const AboutUsMStyled = styled.main`
 	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-`;
-
-const DropDownContainer = styled.div`
-	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 
 	justify-content: center;
+`;
+
+const DropDownContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 `;
 
 const AboutUsSectionStyled = styled.section`

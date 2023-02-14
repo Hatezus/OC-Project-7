@@ -12,6 +12,7 @@ const NavBarDStyled = styled.nav`
 	justify-content: flex-end;
 
 	margin-top: 17px;
+	margin-bottom: 63px;
 
 	.HomeLink {
 		width: 136px;
@@ -43,10 +44,10 @@ const NavBarDStyled = styled.nav`
 function NavBarD() {
 	return (
 		<NavBarDStyled>
-			<Link className='HomeLink' to='/'>
+			<Link className='HomeLink' to='/Home'>
 				Accueil
 			</Link>
-			<Link className='AboutUsLink' to='/'>
+			<Link className='AboutUsLink' to='/About us'>
 				A Propos
 			</Link>
 		</NavBarDStyled>

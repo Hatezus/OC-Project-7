@@ -3,8 +3,8 @@ import {Link, NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavBarMStyled = styled.nav`
-	width: 309px;
-	height: 34px;
+	width: 140px;
+	height: 17px;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -12,15 +12,16 @@ const NavBarMStyled = styled.nav`
 	justify-content: flex-end;
 
 	margin-top: 17px;
+	margin-bottom: 40px;
 
 	.HomeLink {
-		width: 136px;
-		height: 34px;
+		width: 59px;
+		height: 17px;
 
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 12px;
 		line-height: 142.6%;
 
 		text-decoration-line: underline;
@@ -28,13 +29,13 @@ const NavBarMStyled = styled.nav`
 		color: #ff6060;
 	}
 	.AboutUsLink {
-		width: 136px;
-		height: 34px;
+		width: 71px;
+		height: 17px;
 
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 12px;
 		line-height: 142.6%;
 
 		color: #ff6060;
@@ -44,10 +45,10 @@ const NavBarMStyled = styled.nav`
 function NavBarM() {
 	return (
 		<NavBarMStyled>
-			<Link className='HomeLink' to='/'>
+			<Link className='HomeLink' to='/Home'>
 				Accueil
 			</Link>
-			<Link className='AboutUsLink' to='/'>
+			<Link className='AboutUsLink' to='/About us'>
 				A Propos
 			</Link>
 		</NavBarMStyled>

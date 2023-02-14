@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
-import Header from '../components/header/HeaderD';
+import HeaderD from '../components/header/HeaderD';
+import FooterD from '../components/footer/FooterD';
+import {Link} from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
 *
@@ -32,12 +34,19 @@ body
 }
 `;
 
-const ErrorPageDStyled = styled.body`
+const ErrorPageDStyled = styled.main`
+	& section {
+		height: 100vh;
+	}
+
 	.message {
 		display: flex;
 		flex-wrap: wrap;
 
 		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
 	}
 
 	.number {
@@ -49,6 +58,8 @@ const ErrorPageDStyled = styled.body`
 			line-height: 142.6%;
 
 			color: #ff6060;
+
+			margin-top: 100px;
 		}
 	}
 	.text {
@@ -66,7 +77,7 @@ const ErrorPageDStyled = styled.body`
 		}
 	}
 
-	.advice {
+	.redirect {
 		& p {
 			font-family: 'Montserrat';
 			font-style: normal;
@@ -77,6 +88,8 @@ const ErrorPageDStyled = styled.body`
 			text-decoration-line: underline;
 
 			color: #ff6060;
+
+			margin-top: 170px;
 		}
 	}
 `;
@@ -85,18 +98,21 @@ function ErrorPageD() {
 	return (
 		<ErrorPageDStyled>
 			<GlobalStyle />
-			<Header />
-			<div className='message'>
-				<div className='number'>
-					<p> 404 </p>
+			<HeaderD />
+			<section>
+				<div className='message'>
+					<div className='number'>
+						<p> 404 </p>
+					</div>
+					<div className='text'>
+						<p> Oups! La page que vous demandez n'existe pas. </p>
+					</div>
+					<Link className='redirect' to='/Home'>
+						<p> Retourner sur la page d'acceuil </p>
+					</Link>
 				</div>
-				<div className='text'>
-					<p> Oups! La page que vous demandez n'existe pas. </p>
-				</div>
-				<div className='advice'>
-					<p> PRetourner sur la page d'acceuil </p>
-				</div>
-			</div>
+			</section>
+			<FooterD />
 		</ErrorPageDStyled>
 	);
 }

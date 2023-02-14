@@ -8,7 +8,6 @@ const TopSectionStyled = styled.div`
 	width: 100%;
 	height: ${(props) => props.height}px;
 
-	margin-top: 63px;
 	padding-left: 2%;
 	padding-right: 2%;
 	border-radius: 25px;
