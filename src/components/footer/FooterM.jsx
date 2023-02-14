@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../utils/images/footer-logo.svg';
 
-const SmallFooterStyled = styled.footer`
+const FooterMStyled = styled.footer`
 	width: 100%;
 	height: 209px;
 
@@ -34,15 +34,15 @@ const SmallFooterStyled = styled.footer`
 	}
 `;
 
-function SmallFooter() {
+function FooterM() {
 	return (
-		<SmallFooterStyled>
+		<FooterMStyled>
 			<div className='logo'>
 				<img src={logo} alt='' />
 			</div>
 			<div className='text'>© 2020 Kasa. All rights reserved</div>
-		</SmallFooterStyled>
+		</FooterMStyled>
 	);
 }
 
-export default SmallFooter;
+export default FooterM;

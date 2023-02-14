@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../utils/images/footer-logo.svg';
 
-const FooterStyled = styled.footer`
+const FooterDStyled = styled.footer`
 	width: 100%;
+	max-width: 1440px;
 	height: 209px;
 
 	display: flex;
@@ -14,6 +15,10 @@ const FooterStyled = styled.footer`
 	background-color: black;
 
 	position: relative;
+
+	margin-top: 164px;
+
+	bottom: 0;
 
 	.logo {
 		position: absolute;
@@ -34,15 +39,15 @@ const FooterStyled = styled.footer`
 	}
 `;
 
-function Footer() {
+function FooterD() {
 	return (
-		<FooterStyled>
+		<FooterDStyled>
 			<div className='logo'>
 				<img src={logo} alt='' />
 			</div>
 			<div className='text'>© 2020 Kasa. All rights reserved</div>
-		</FooterStyled>
+		</FooterDStyled>
 	);
 }
 
-export default Footer;
+export default FooterD;

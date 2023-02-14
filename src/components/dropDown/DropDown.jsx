@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
+import arrow from '../../utils/images/dropDown-arrow.png';
+
 const DropdownContainer = styled.div`
-	display: flex;
-	flex-direction: column;
+	max-width: 1023px;
+	width: 100%;
+
+	margin-top: 33px;
 `;
 
 const DropdownHeader = styled.div`
@@ -27,10 +31,16 @@ const DropdownHeader = styled.div`
 	color: #ffffff;
 
 	padding-left: 18px;
+	position: relative;
 `;
 
 const DropDownArrow = styled.div`
-	padding-left: 92%;
+	position: absolute;
+	right: 5%;
+
+	& .arrow_up {
+		rotate: 180deg;
+	}
 `;
 const DropdownBody = styled.div`
 	display: ${(props) => (props.isOpen ? 'block' : 'none')};
@@ -47,9 +57,12 @@ const DropdownBody = styled.div`
 	& p {
 		font-family: 'Montserrat';
 		font-style: normal;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 24px;
 		line-height: 142.6%;
+
+		display: flex;
+		align-items: center;
 
 		color: #ff6060;
 
@@ -69,7 +82,13 @@ const Dropdown = ({DropDownName, DropDownContent}) => {
 		<DropdownContainer>
 			<DropdownHeader onClick={() => setIsOpen(!isOpen)}>
 				{DropDownName}
-				<DropDownArrow> {isOpen ? '🔽' : '🔼'}</DropDownArrow>
+				<DropDownArrow>
+					<img
+						className={isOpen ? 'arrow_up' : 'arrow_down'}
+						src={arrow}
+						alt='A small arrow'
+					/>
+				</DropDownArrow>
 			</DropdownHeader>
 			<DropdownBody isOpen={isOpen}>
 				<p>{DropDownContent}</p>

@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import HomeD from './pages/HomeD';
+
+import AboutUsM from './pages/AboutUsM';
+import AboutUsD from './pages/AboutUsD';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<HomeD />
+			<AboutUsM />
 		</BrowserRouter>
 	</React.StrictMode>
 );

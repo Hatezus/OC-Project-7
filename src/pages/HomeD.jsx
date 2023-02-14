@@ -2,8 +2,6 @@ import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 import DropDown from '../components/dropDown/DropDown';
 import SmallDropdown from '../components/dropDown/SmallDropDown';
-import Footer from '../components/footer/Footer';
-import SmallFooter from '../components/footer/SmallFooter';
 
 const GlobalStyle = createGlobalStyle`
 *
@@ -29,7 +27,7 @@ body
 }
 `;
 
-const HomdDStyled = styled.section`
+const HomdDStyled = styled.body`
 	position: relative;
 	max-width: 1440px;
 	height: 1024px;

@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import AboutUsLink from './AboutUsLink';
-import HomeLink from './HomeLink';
-
-const NavBarStyled = styled.nav`
+const NavBarMStyled = styled.nav`
 	width: 309px;
 	height: 34px;
 
@@ -27,6 +24,7 @@ const NavBarStyled = styled.nav`
 		line-height: 142.6%;
 
 		text-decoration-line: underline;
+
 		color: #ff6060;
 	}
 	.AboutUsLink {
@@ -43,17 +41,17 @@ const NavBarStyled = styled.nav`
 	}
 `;
 
-function NavBar() {
+function NavBarM() {
 	return (
-		<NavBarStyled>
+		<NavBarMStyled>
 			<Link className='HomeLink' to='/'>
 				Accueil
 			</Link>
 			<Link className='AboutUsLink' to='/'>
 				A Propos
 			</Link>
-		</NavBarStyled>
+		</NavBarMStyled>
 	);
 }
 
-export default NavBar;
+export default NavBarM;
