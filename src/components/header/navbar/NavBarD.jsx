@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavBarDStyled = styled.nav`
@@ -8,48 +8,37 @@ const NavBarDStyled = styled.nav`
 
 	display: flex;
 	flex-wrap: wrap;
-
 	justify-content: flex-end;
 
 	margin-top: 17px;
 	margin-bottom: 63px;
 
-	.HomeLink {
+	.NavLink {
 		width: 136px;
 		height: 34px;
-
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 142.6%;
-
-		text-decoration-line: underline;
 		color: #ff6060;
+		text-decoration: none;
 	}
-	.AboutUsLink {
-		width: 136px;
-		height: 34px;
 
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 142.6%;
-
-		color: #ff6060;
+	.NavLink.active {
+		text-decoration: underline;
 	}
 `;
 
 function NavBarD() {
 	return (
 		<NavBarDStyled>
-			<Link className='HomeLink' to='/Home'>
+			<NavLink className='NavLink' activeClassName='active' to='/Home'>
 				Accueil
-			</Link>
-			<Link className='AboutUsLink' to='/About us'>
+			</NavLink>
+			<NavLink className='NavLink' activeClassName='active' to='/About us'>
 				A Propos
-			</Link>
+			</NavLink>
 		</NavBarDStyled>
 	);
 }

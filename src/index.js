@@ -4,6 +4,7 @@ import {BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 
 import HomeD from './pages/HomeD';
+import HomeM from './pages/HomeM';
 
 import AboutUsM from './pages/AboutUsM';
 import AboutUsD from './pages/AboutUsD';
@@ -17,7 +18,7 @@ root.render(
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/Home'>
-					{window.innerWidth > 375 ? <HomeD /> : <HomeD />}
+					{window.innerWidth > 375 ? <HomeD /> : <HomeM />}
 				</Route>
 				<Route exact path='/About us'>
 					{window.innerWidth > 375 ? <AboutUsD /> : <AboutUsM />}
@@ -25,6 +26,9 @@ root.render(
 				<Route exact path='/*'>
 					{window.innerWidth > 375 ? <ErrorPageD /> : <ErrorPageM />}
 				</Route>
+				{/* <Route exact path='/*'>
+					{window.innerWidth > 375 ? <LodgingD /> : <LodgingM />}
+				</Route> */}
 			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>

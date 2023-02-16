@@ -1,7 +1,11 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
-import DropDown from '../components/dropDown/DropDown';
-import SmallDropdown from '../components/dropDown/SmallDropDown';
+import GalleryD from '../components/gallery/GalleryD';
+
+import HeaderD from '../components/header/HeaderD';
+import TopSection from '../components/topSection/TopSection';
+
+import topImg from '../utils/images/img-homePage.png';
 
 const GlobalStyle = createGlobalStyle`
 *
@@ -27,7 +31,7 @@ body
 }
 `;
 
-const HomdDStyled = styled.body`
+const HomdDStyled = styled.main`
 	position: relative;
 	max-width: 1440px;
 	height: 1024px;
@@ -39,14 +43,13 @@ function HomeD() {
 	return (
 		<HomdDStyled>
 			<GlobalStyle />
-			<DropDown
-				DropDownName='Test'
-				DropDownContent='iuhdsfisdf dfigfuhbs gjhdiofhgji dfopsodàoijdfgio^jdfçi goidfjg oiudjf goijdfgoij dfoijhg oidfjgoijdf  ogpih dfiuhzeioyug ueyrgo ierjguipheio ugipuerhg iuerh iouy bergiouiou ehsguisergiuhfgigjuodijhgfodifgh'
+			<HeaderD />
+			<TopSection
+				imgSrc={topImg}
+				height={223}
+				text='Chez vous, partout et ailleurs '
 			/>
-			<SmallDropdown
-				SmallDropDownName='Equipements'
-				SmallDropDownContent='kjsdfusduif usdiofhjsiodh f_shd fo ihsd foihs dqoiudpfhiusdhf iuqsdhfiufàçjsdgôi h sdfoigfh suidhf iusdgf '
-			/>
+			<GalleryD />
 		</HomdDStyled>
 	);
 }
