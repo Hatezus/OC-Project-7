@@ -1,32 +1,34 @@
-// import React, {Component} from 'react';
-// import Navbar from './components/Navbar';
-// import {BrowserRouter, Route} from 'react-router-dom';
-// import Home from './components/Home';
-// import About from './components/About';
-// import Contact from './components/Contact';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import ErrorPage from './pages/ErrorPage';
+import Lodging from './pages/Lodging';
 
-// class App extends Component {
-// 	render() {
-// 		return (
-// 			<BrowserRouter>
-// 				<div className='App'>
-// 					<Navbar />
-// 					<Route exact path='/' component={Home} />
-// 					<Route exact path='/about' component={About} />
-// 					<Route exact path='/contact' component={Contact} />
-// 				</div>
-// 			</BrowserRouter>
-// 		);
-// 	}
-// }
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-// // function App() {
-// // 	return (
-// // 		<div className='App'>
-// // 			<h1> Ma première merde </h1>
-// // 			<Ninjas name='pouet' age='21' belt='yellow' />
-// // 		</div>
-// // 	);
-// // }
+const router = createBrowserRouter([
+	{
+		path: '/Home',
+		element: <Home />,
+	},
+	{
+		path: '/Lodging/:id',
+		element: <Lodging />,
+	},
+	{
+		path: '/About',
+		element: <AboutUs />,
+	},
+	{
+		path: '*',
+		element: <ErrorPage />,
+	},
+]);
+function App() {
+	return (
+		<>
+			<RouterProvider router={router} />
+		</>
+	);
+}
 
-// export default App;
+export default App;

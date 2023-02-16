@@ -1,7 +1,9 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
-import HeaderD from '../components/header/HeaderD';
-import FooterD from '../components/footer/FooterD';
+
+import Header from '../components/header/Header';
+import Footer from '../components/Footer';
+
 import {Link} from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
@@ -34,7 +36,7 @@ body
 }
 `;
 
-const ErrorPageDStyled = styled.main`
+const ErrorPageStyled = styled.main`
 	& section {
 		height: 100vh;
 	}
@@ -60,20 +62,29 @@ const ErrorPageDStyled = styled.main`
 			color: #ff6060;
 
 			margin-top: 100px;
+
+			@media screen and (max-width: 375px) {
+				font-size: 96px;
+			}
 		}
 	}
 	.text {
 		& p {
+			display: flex;
+			align-items: flex-end;
+			text-align: center;
+
 			font-family: 'Montserrat';
 			font-style: normal;
 			font-weight: 500;
 			font-size: 36px;
 			line-height: 142.6%;
 
-			display: flex;
-			align-items: flex-end;
-
 			color: #ff6060;
+
+			@media screen and (max-width: 375px) {
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -90,15 +101,19 @@ const ErrorPageDStyled = styled.main`
 			color: #ff6060;
 
 			margin-top: 170px;
+
+			@media screen and (max-width: 375px) {
+				font-size: 14px;
+			}
 		}
 	}
 `;
 
-function ErrorPageD() {
+function ErrorPage() {
 	return (
-		<ErrorPageDStyled>
+		<ErrorPageStyled>
 			<GlobalStyle />
-			<HeaderD />
+			<Header />
 			<section>
 				<div className='message'>
 					<div className='number'>
@@ -112,9 +127,9 @@ function ErrorPageD() {
 					</Link>
 				</div>
 			</section>
-			<FooterD />
-		</ErrorPageDStyled>
+			<Footer />
+		</ErrorPageStyled>
 	);
 }
 
-export default ErrorPageD;
+export default ErrorPage;

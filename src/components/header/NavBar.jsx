@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-const NavBarDStyled = styled.nav`
+const NavBarStyled = styled.nav`
 	width: 309px;
 	height: 34px;
 
@@ -13,9 +13,16 @@ const NavBarDStyled = styled.nav`
 	margin-top: 17px;
 	margin-bottom: 63px;
 
+	@media screen and (max-width: 375px) {
+		width: 140px;
+		height: 17px;
+		margin-bottom: 40px;
+	}
+
 	.NavLink {
 		width: 136px;
 		height: 34px;
+
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
@@ -23,6 +30,12 @@ const NavBarDStyled = styled.nav`
 		line-height: 142.6%;
 		color: #ff6060;
 		text-decoration: none;
+		@media screen and (max-width: 375px) {
+			font-size: 12px;
+
+			width: 59px;
+			height: 17px;
+		}
 	}
 
 	.NavLink.active {
@@ -30,17 +43,17 @@ const NavBarDStyled = styled.nav`
 	}
 `;
 
-function NavBarD() {
+function NavBar() {
 	return (
-		<NavBarDStyled>
+		<NavBarStyled>
 			<NavLink className='NavLink' activeClassName='active' to='/Home'>
 				Accueil
 			</NavLink>
-			<NavLink className='NavLink' activeClassName='active' to='/About us'>
+			<NavLink className='NavLink' activeClassName='active' to='/About'>
 				A Propos
 			</NavLink>
-		</NavBarDStyled>
+		</NavBarStyled>
 	);
 }
 
-export default NavBarD;
+export default NavBar;

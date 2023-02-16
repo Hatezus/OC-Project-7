@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
-import GalleryD from '../components/gallery/GalleryD';
+import Footer from '../components/Footer';
 
-import HeaderD from '../components/header/HeaderD';
-import TopSection from '../components/topSection/TopSection';
+import Gallery from '../components/Gallery';
+import Header from '../components/header/Header';
+import TopSection from '../components/TopSection';
 
 import topImg from '../utils/images/img-homePage.png';
 
@@ -31,7 +32,7 @@ body
 }
 `;
 
-const HomdDStyled = styled.main`
+const HomdStyled = styled.main`
 	position: relative;
 	max-width: 1440px;
 	height: 1024px;
@@ -39,19 +40,20 @@ const HomdDStyled = styled.main`
 	background: #ffffff;
 `;
 
-function HomeD() {
+function Home() {
 	return (
-		<HomdDStyled>
+		<HomdStyled>
 			<GlobalStyle />
-			<HeaderD />
+			<Header />
 			<TopSection
 				imgSrc={topImg}
 				height={223}
 				text='Chez vous, partout et ailleurs '
 			/>
-			<GalleryD />
-		</HomdDStyled>
+			<Gallery />
+			<Footer />
+		</HomdStyled>
 	);
 }
 
-export default HomeD;
+export default Home;

@@ -2,14 +2,24 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-const CardMStyled = styled.div`
+const CardStyled = styled.div`
 	position: relative;
-	width: 335px;
-	height: 255px;
+	width: 30%;
+	height: 340px;
 	border-radius: 10px;
 	cursor: pointer;
 	overflow: hidden;
 	transition: box-shadow 0.2s ease-in-out;
+
+	@media screen and (max-width: 1230px) {
+		width: 47%;
+	}
+	@media screen and (max-width: 900px) {
+		width: 100%;
+	}
+	@media screen and (max-width: 500px) {
+		height: 200px;
+	}
 
 	.gallery_card {
 		width: 100%;
@@ -60,13 +70,13 @@ const CardMStyled = styled.div`
 	}
 `;
 
-export default function CardM({id, title, cover}) {
+export default function Card({id, title, cover}) {
 	return (
-		<CardMStyled>
+		<CardStyled>
 			<Link to={`/lodging/${id}`} className='gallery_card'>
 				<img src={cover} alt={title} />
 				<h3>{title}</h3>
 			</Link>
-		</CardMStyled>
+		</CardStyled>
 	);
 }

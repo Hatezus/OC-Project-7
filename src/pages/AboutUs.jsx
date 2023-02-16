@@ -2,9 +2,9 @@ import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
 import Dropdown from '../components/dropDown/DropDown';
-import FooterD from '../components/footer/FooterD';
-import HeaderD from '../components/header/HeaderD';
-import TopSection from '../components/topSection/TopSection';
+import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import TopSection from '../components/TopSection';
 import topImg from '../utils/images/img-aboutUs.png';
 
 const GlobalStyle = createGlobalStyle`
@@ -38,17 +38,18 @@ body
 `;
 
 const DropDownContainer = styled.div`
-	display: flex;
-	flex-wrap: wrap;
 	width: 100%;
 
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 `;
 
-const AboutUsDStyled = styled.main`
+const AboutUsStyled = styled.main`
+	min-height: 100vh;
+
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 `;
 
 const AboutUsSectionStyled = styled.section`
@@ -57,11 +58,11 @@ const AboutUsSectionStyled = styled.section`
 	flex: 1;
 `;
 
-function AboutUsD() {
+function AboutUs() {
 	return (
-		<AboutUsDStyled>
+		<AboutUsStyled>
 			<GlobalStyle />
-			<HeaderD />
+			<Header />
 			<TopSection imgSrc={topImg} height={223} />
 			<AboutUsSectionStyled>
 				<DropDownContainer>
@@ -84,9 +85,9 @@ function AboutUsD() {
 				</DropDownContainer>
 			</AboutUsSectionStyled>
 
-			<FooterD />
-		</AboutUsDStyled>
+			<Footer />
+		</AboutUsStyled>
 	);
 }
 
-export default AboutUsD;
+export default AboutUs;

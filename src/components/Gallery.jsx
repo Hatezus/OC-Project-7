@@ -1,25 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import datas from '../../utils/data';
-import CardM from './cards/CardM';
+import datas from '../utils/data';
+import Card from './Card';
 
-const GalleryMStyled = styled.section`
+const GalleryStyled = styled.section`
 	display: flex;
 	flex-wrap: wrap;
+	gap: 50px;
 	background-color: #f7f7f7;
 	padding: 50px;
 	border-radius: 25px;
-	width: 100%;
+	width: 95%;
 	margin: 0 auto;
-	margin-top: 25px;
+	margin-top: 40px;
 `;
 
-export default function GalleryM() {
+export default function Gallery() {
 	return (
-		<GalleryMStyled>
+		<GalleryStyled>
 			{datas.map((data) => {
 				return (
-					<CardM
+					<Card
 						key={data.id}
 						id={data.id}
 						title={data.title}
@@ -27,6 +28,6 @@ export default function GalleryM() {
 					/>
 				);
 			})}
-		</GalleryMStyled>
+		</GalleryStyled>
 	);
 }
