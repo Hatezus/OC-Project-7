@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
+import arrow from '../../utils/images/dropDown-arrow.png';
+
 const SmallDropdownContainer = styled.div`
-	display: flex;
-	flex-direction: column;
+	width: 100%;
+
+	margin-top: 33px;
 `;
 
-const SmallDropdownHeader = styled.div`
+const DropdownHeader = styled.div`
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 
-	max-width: 582px;
 	height: 52px;
 
 	background: #ff6060;
@@ -27,18 +29,28 @@ const SmallDropdownHeader = styled.div`
 	color: #ffffff;
 
 	padding-left: 18px;
+	position: relative;
 `;
 
-const SmallDropDownArrow = styled.div`
-	padding-left: 75%;
+const DropDownArrow = styled.div`
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	right: 5%;
+
+	& .arrow_up {
+		rotate: 180deg;
+	}
 `;
-const SmallDropdownBody = styled.div`
+
+const DropdownBody = styled.div`
 	display: ${(props) => (props.isOpen ? 'block' : 'none')};
 
 	flex-wrap: wrap;
 	overflow: auto;
 
-	max-width: 582px;
+	max-width: 1023px;
+	min-height: 233px;
 	height: fit-content;
 
 	background: #f7f7f7;
@@ -50,31 +62,39 @@ const SmallDropdownBody = styled.div`
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 142.6%;
-		/* or 26px */
+
+		display: flex;
+		align-items: center;
 
 		color: #ff6060;
 
-		padding-top: 40px;
+		padding-top: 36px;
 		padding-bottom: 19px;
-		padding-left: 20px;
-		padding-right: 12px;
+		padding-left: 18px;
+		padding-right: 27px;
 
 		overflow-wrap: break-word;
 	}
 `;
 
-const SmallDropdown = ({SmallDropDownName, SmallDropDownContent}) => {
+const SmallDropdown = ({DropDownName, DropDownContent}) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<SmallDropdownContainer>
-			<SmallDropdownHeader onClick={() => setIsOpen(!isOpen)}>
-				{SmallDropDownName}
-				<SmallDropDownArrow> {isOpen ? '🔽' : '🔼'}</SmallDropDownArrow>
-			</SmallDropdownHeader>
-			<SmallDropdownBody isOpen={isOpen}>
-				<p>{SmallDropDownContent}</p>
-			</SmallDropdownBody>
+			<DropdownHeader onClick={() => setIsOpen(!isOpen)}>
+				{DropDownName}
+				<DropDownArrow>
+					<img
+						className={isOpen ? 'arrow_up' : 'arrow_down'}
+						src={arrow}
+						alt='A small arrow'
+					/>
+				</DropDownArrow>
+			</DropdownHeader>
+			<DropdownBody isOpen={isOpen}>
+				<p>{DropDownContent}</p>
+			</DropdownBody>
 		</SmallDropdownContainer>
 	);
 };

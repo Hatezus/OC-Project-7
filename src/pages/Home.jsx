@@ -47,8 +47,8 @@ function Home() {
 			<Header />
 			<TopSection
 				imgSrc={topImg}
-				height={223}
 				text='Chez vous, partout et ailleurs '
+				isHomePage={true}
 			/>
 			<Gallery />
 			<Footer />

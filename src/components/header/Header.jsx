@@ -16,6 +16,10 @@ const HeaderStyled = styled.header`
 	margin-bottom: 30px;
 	padding-left: 2%;
 	padding-right: 2%;
+
+	@media screen and (max-width: 465px) {
+		margin-bottom: 10px;
+	}
 `;
 
 function Header() {

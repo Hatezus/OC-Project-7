@@ -13,10 +13,14 @@ const NavBarStyled = styled.nav`
 	margin-top: 17px;
 	margin-bottom: 63px;
 
+	@media screen and (max-width: 540px) {
+		width: 200px;
+		height: 24px;
+	}
+
 	@media screen and (max-width: 375px) {
 		width: 140px;
 		height: 17px;
-		margin-bottom: 40px;
 	}
 
 	.NavLink {
@@ -30,6 +34,12 @@ const NavBarStyled = styled.nav`
 		line-height: 142.6%;
 		color: #ff6060;
 		text-decoration: none;
+		@media screen and (max-width: 540px) {
+			font-size: 20px;
+
+			width: 100px;
+			height: 21px;
+		}
 		@media screen and (max-width: 375px) {
 			font-size: 12px;
 
@@ -46,7 +56,7 @@ const NavBarStyled = styled.nav`
 function NavBar() {
 	return (
 		<NavBarStyled>
-			<NavLink className='NavLink' activeClassName='active' to='/Home'>
+			<NavLink className='NavLink' activeClassName='active' to='/'>
 				Accueil
 			</NavLink>
 			<NavLink className='NavLink' activeClassName='active' to='/About'>

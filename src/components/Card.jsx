@@ -12,7 +12,7 @@ const CardStyled = styled.div`
 	transition: box-shadow 0.2s ease-in-out;
 
 	@media screen and (max-width: 1230px) {
-		width: 47%;
+		width: 45%;
 	}
 	@media screen and (max-width: 900px) {
 		width: 100%;

@@ -43,6 +43,9 @@ const DropDownContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+
+	padding-left: 2%;
+	padding-right: 2%;
 `;
 
 const AboutUsStyled = styled.main`
@@ -63,7 +66,7 @@ function AboutUs() {
 		<AboutUsStyled>
 			<GlobalStyle />
 			<Header />
-			<TopSection imgSrc={topImg} height={223} />
+			<TopSection imgSrc={topImg} />
 			<AboutUsSectionStyled>
 				<DropDownContainer>
 					<Dropdown

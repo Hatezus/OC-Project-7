@@ -49,6 +49,9 @@ const ErrorPageStyled = styled.main`
 
 		justify-content: center;
 		align-items: center;
+
+		padding-left: 2%;
+		padding-right: 2%;
 	}
 
 	.number {
@@ -63,8 +66,14 @@ const ErrorPageStyled = styled.main`
 
 			margin-top: 100px;
 
-			@media screen and (max-width: 375px) {
-				font-size: 96px;
+			@media screen and (max-width: 1000px) {
+				font-size: 200px;
+			}
+			@media screen and (max-width: 740px) {
+				font-size: 160px;
+			}
+			@media screen and (max-width: 740px) {
+				font-size: 100px;
 			}
 		}
 	}
@@ -82,8 +91,14 @@ const ErrorPageStyled = styled.main`
 
 			color: #ff6060;
 
-			@media screen and (max-width: 375px) {
-				font-size: 18px;
+			@media screen and (max-width: 1000px) {
+				font-size: 27px;
+			}
+			@media screen and (max-width: 740px) {
+				font-size: 20px;
+			}
+			@media screen and (max-width: 740px) {
+				font-size: 15px;
 			}
 		}
 	}
@@ -102,7 +117,7 @@ const ErrorPageStyled = styled.main`
 
 			margin-top: 170px;
 
-			@media screen and (max-width: 375px) {
+			@media screen and (max-width: 1000px) {
 				font-size: 14px;
 			}
 		}
@@ -122,7 +137,7 @@ function ErrorPage() {
 					<div className='text'>
 						<p> Oups! La page que vous demandez n'existe pas. </p>
 					</div>
-					<Link className='redirect' to='/Home'>
+					<Link className='redirect' to='/'>
 						<p> Retourner sur la page d'acceuil </p>
 					</Link>
 				</div>

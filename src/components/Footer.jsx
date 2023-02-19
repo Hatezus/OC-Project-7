@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import logo from '../utils/images/footer-logo.svg';
 
 const FooterStyled = styled.footer`
-	width: 100%;
+	width: 96%;
 	max-width: 1440px;
 	height: 209px;
 	margin-top: 164px;
+	margin-left: 2%;
+	margin-right: 2%;
 
 	bottom: 0;
 	display: flex;
@@ -34,7 +36,7 @@ const FooterStyled = styled.footer`
 		top: 75%;
 		font-size: 24px;
 
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 490px) {
 			font-size: 12px;
 			top: 65%;
 		}

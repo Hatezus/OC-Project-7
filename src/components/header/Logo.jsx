@@ -6,7 +6,12 @@ const LogoStyled = styled.div`
 	width: 210.32px;
 	height: 68px;
 
-	@media screen and (max-width: 375px) {
+	@media screen and (max-width: 465px) {
+		width: 160px;
+		height: 47px;
+	}
+
+	@media screen and (max-width: 425px) {
 		width: 145px;
 		height: 47px;
 	}
