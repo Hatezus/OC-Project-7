@@ -6,10 +6,10 @@ import {useParams} from 'react-router-dom';
 import datas from '../utils/data';
 
 import Header from '../components/header/Header';
-import Footer from '../components/Footer';
 import Caroussel from '../components/Caroussel';
-import SmallDropdown from '../components/dropDown/SmallDropDown';
 import Tag from '../components/Tag';
+import SmallDropdown from '../components/dropDown/SmallDropDown';
+import Footer from '../components/Footer';
 
 import greyStar from '../utils/images/grey-star.png';
 import redStar from '../utils/images/red-star.png';
@@ -132,6 +132,7 @@ const LodgingStyled = styled.main`
 	flex-direction: column;
 
 	.lodging {
+		height: 60vh;
 		&_content {
 			width: 100%;
 
@@ -161,13 +162,6 @@ const LodgingStyled = styled.main`
 					font-style: normal;
 					font-weight: 500;
 					font-size: 36px;
-					line-height: 142.6%;
-				}
-				p {
-					font-family: 'Montserrat';
-					font-style: normal;
-					font-weight: 500;
-					font-size: 18px;
 					line-height: 142.6%;
 				}
 				div {
@@ -241,7 +235,6 @@ const LodgingStyled = styled.main`
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			align-items: flex-end;
 
 			padding-left: 2%;
 			padding-right: 2%;

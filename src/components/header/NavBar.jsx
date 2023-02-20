@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function NavBar() {
+const NavBar = () => {
 	return (
 		<NavBarStyled>
 			<NavLink className='NavLink' to='/'>
@@ -15,7 +15,7 @@ function NavBar() {
 			</NavLink>
 		</NavBarStyled>
 	);
-}
+};
 
 export default NavBar;
 

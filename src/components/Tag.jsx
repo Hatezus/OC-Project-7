@@ -3,13 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function Tag({tagName}) {
+const Tag = ({tagName}) => {
 	return (
 		<TagStyled>
 			<p>{tagName}</p>
 		</TagStyled>
 	);
-}
+};
 
 export default Tag;
 
@@ -42,7 +42,7 @@ const TagStyled = styled.div`
 		color: #ffffff;
 
 		@media screen and (max-width: 850px) {
-			font-size: 2px;
+			font-size: 10px;
 		}
 	}
 `;

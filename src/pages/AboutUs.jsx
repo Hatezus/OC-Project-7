@@ -2,10 +2,11 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
-import Dropdown from '../components/dropDown/DropDown';
-import Footer from '../components/Footer';
 import Header from '../components/header/Header';
 import TopSection from '../components/TopSection';
+import Dropdown from '../components/dropDown/DropDown';
+import Footer from '../components/Footer';
+
 import topImg from '../utils/images/img-aboutUs.png';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/

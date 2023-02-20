@@ -5,13 +5,13 @@ import styled from 'styled-components';
 import logo from '../../utils/images/header-logo.svg';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function Logo() {
+const Logo = () => {
 	return (
 		<LogoStyled>
 			<img src={logo} alt='Brand logo' />
 		</LogoStyled>
 	);
-}
+};
 
 export default Logo;
 

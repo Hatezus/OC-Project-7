@@ -6,14 +6,14 @@ import Logo from './Logo';
 import NavBar from './NavBar';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function Header() {
+const Header = () => {
 	return (
 		<HeaderStyled>
 			<Logo />
 			<NavBar />
 		</HeaderStyled>
 	);
-}
+};
 
 export default Header;
 

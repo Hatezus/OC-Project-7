@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import {Link} from 'react-router-dom';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function ErrorPage() {
+const ErrorPage = () => {
 	return (
 		<ErrorPageStyled>
 			<GlobalStyle />
@@ -29,7 +29,7 @@ function ErrorPage() {
 			<Footer />
 		</ErrorPageStyled>
 	);
-}
+};
 
 export default ErrorPage;
 

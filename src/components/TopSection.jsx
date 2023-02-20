@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function TopSection({imgSrc, text, isHomePage}) {
+const TopSection = ({imgSrc, text, isHomePage}) => {
 	return (
 		<TopSectionStyled isHomePage={isHomePage}>
 			<TopSectionImg>
@@ -13,7 +13,7 @@ function TopSection({imgSrc, text, isHomePage}) {
 			</TopSectionImg>
 		</TopSectionStyled>
 	);
-}
+};
 
 export default TopSection;
 

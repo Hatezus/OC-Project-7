@@ -3,14 +3,14 @@ import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 import Footer from '../components/Footer';
 
-import Gallery from '../components/Gallery';
 import Header from '../components/header/Header';
 import TopSection from '../components/TopSection';
+import Gallery from '../components/Gallery';
 
 import topImg from '../utils/images/img-homePage.png';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function Home() {
+const Home = () => {
 	return (
 		<HomdStyled>
 			<GlobalStyle />
@@ -24,7 +24,7 @@ function Home() {
 			<Footer />
 		</HomdStyled>
 	);
-}
+};
 
 export default Home;
 
@@ -50,7 +50,6 @@ body
 
 const HomdStyled = styled.main`
 	max-width: 1440px;
-	height: 1024px;
 
 	position: relative;
 

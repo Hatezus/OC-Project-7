@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import logo from '../utils/images/footer-logo.svg';
 
 /*--------------------------------------------------[ Component ]--------------------------------------------------*/
-function Footer() {
+const Footer = () => {
 	return (
 		<FooterStyled>
 			<div className='logo'>
@@ -14,7 +14,7 @@ function Footer() {
 			<div className='text'>© 2020 Kasa. All rights reserved</div>
 		</FooterStyled>
 	);
-}
+};
 
 export default Footer;
 

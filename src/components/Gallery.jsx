@@ -1,6 +1,7 @@
 /*--------------------------------------------------[ Improts ]--------------------------------------------------*/
 import React from 'react';
 import styled from 'styled-components';
+
 import datas from '../utils/data';
 import Card from './Card';
 
