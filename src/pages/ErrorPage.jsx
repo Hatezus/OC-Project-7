@@ -1,3 +1,4 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
@@ -6,7 +7,35 @@ import Footer from '../components/Footer';
 
 import {Link} from 'react-router-dom';
 
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
+function ErrorPage() {
+	return (
+		<ErrorPageStyled>
+			<GlobalStyle />
+			<Header />
+			<section>
+				<div className='message'>
+					<div className='number'>
+						<p> 404 </p>
+					</div>
+					<div className='text'>
+						<p> Oups! La page que vous demandez n'existe pas. </p>
+					</div>
+					<Link className='redirect' to='/'>
+						<p> Retourner sur la page d'acceuil </p>
+					</Link>
+				</div>
+			</section>
+			<Footer />
+		</ErrorPageStyled>
+	);
+}
+
+export default ErrorPage;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
 const GlobalStyle = createGlobalStyle`
+
 *
 {
     margin: 0;
@@ -15,11 +44,6 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     box-sizing: border-box;
     padding: 0;
-}
-
-a
-{
-    text-decoration: none;
 }
 
 body
@@ -123,28 +147,3 @@ const ErrorPageStyled = styled.main`
 		}
 	}
 `;
-
-function ErrorPage() {
-	return (
-		<ErrorPageStyled>
-			<GlobalStyle />
-			<Header />
-			<section>
-				<div className='message'>
-					<div className='number'>
-						<p> 404 </p>
-					</div>
-					<div className='text'>
-						<p> Oups! La page que vous demandez n'existe pas. </p>
-					</div>
-					<Link className='redirect' to='/'>
-						<p> Retourner sur la page d'acceuil </p>
-					</Link>
-				</div>
-			</section>
-			<Footer />
-		</ErrorPageStyled>
-	);
-}
-
-export default ErrorPage;

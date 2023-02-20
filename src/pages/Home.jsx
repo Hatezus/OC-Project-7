@@ -1,3 +1,4 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 import Footer from '../components/Footer';
@@ -8,38 +9,7 @@ import TopSection from '../components/TopSection';
 
 import topImg from '../utils/images/img-homePage.png';
 
-const GlobalStyle = createGlobalStyle`
-*
-{
-    margin: 0;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    padding: 0;
-}
-
-a
-{
-    text-decoration: none;
-}
-
-body
-{
-    max-width: 1440px;
-    margin: auto;
-    overflow-x: hidden;
-}
-`;
-
-const HomdStyled = styled.main`
-	position: relative;
-	max-width: 1440px;
-	height: 1024px;
-
-	background: #ffffff;
-`;
-
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
 function Home() {
 	return (
 		<HomdStyled>
@@ -57,3 +27,32 @@ function Home() {
 }
 
 export default Home;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
+const GlobalStyle = createGlobalStyle`
+*
+{
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body
+{
+    max-width: 1440px;
+    margin: auto;
+    overflow-x: hidden;
+}
+`;
+
+const HomdStyled = styled.main`
+	max-width: 1440px;
+	height: 1024px;
+
+	position: relative;
+
+	background: #ffffff;
+`;

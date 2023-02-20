@@ -1,48 +1,10 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import styled from 'styled-components';
+
 import logo from '../utils/images/footer-logo.svg';
 
-const FooterStyled = styled.footer`
-	width: 96%;
-	max-width: 1440px;
-	height: 209px;
-	margin-top: 164px;
-	margin-left: 2%;
-	margin-right: 2%;
-
-	bottom: 0;
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-
-	background-color: black;
-
-	.logo {
-		position: absolute;
-		top: 34%;
-	}
-
-	.text {
-		position: absolute;
-
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 500;
-		line-height: 142.6%;
-		color: #ffff;
-
-		top: 75%;
-		font-size: 24px;
-
-		@media screen and (max-width: 490px) {
-			font-size: 12px;
-			top: 65%;
-		}
-	}
-`;
-
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
 function Footer() {
 	return (
 		<FooterStyled>
@@ -55,3 +17,46 @@ function Footer() {
 }
 
 export default Footer;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
+const FooterStyled = styled.footer`
+	width: 96%;
+	max-width: 1440px;
+	height: 209px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	bottom: 0;
+
+	margin-top: 164px;
+	margin-left: 2%;
+	margin-right: 2%;
+
+	background-color: black;
+
+	.logo {
+		position: absolute;
+		top: 34%;
+	}
+
+	.text {
+		position: absolute;
+		top: 75%;
+
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 142.6%;
+		color: #ffff;
+
+		@media screen and (max-width: 490px) {
+			font-size: 12px;
+			top: 65%;
+		}
+	}
+`;

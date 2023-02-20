@@ -1,7 +1,25 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
+function NavBar() {
+	return (
+		<NavBarStyled>
+			<NavLink className='NavLink' to='/'>
+				Accueil
+			</NavLink>
+			<NavLink className='NavLink' to='/About'>
+				A Propos
+			</NavLink>
+		</NavBarStyled>
+	);
+}
+
+export default NavBar;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
 const NavBarStyled = styled.nav`
 	width: 309px;
 	height: 34px;
@@ -34,17 +52,18 @@ const NavBarStyled = styled.nav`
 		line-height: 142.6%;
 		color: #ff6060;
 		text-decoration: none;
-		@media screen and (max-width: 540px) {
-			font-size: 20px;
 
+		@media screen and (max-width: 540px) {
 			width: 100px;
 			height: 21px;
+
+			font-size: 20px;
 		}
 		@media screen and (max-width: 375px) {
-			font-size: 12px;
-
 			width: 59px;
 			height: 17px;
+
+			font-size: 12px;
 		}
 	}
 
@@ -52,18 +71,3 @@ const NavBarStyled = styled.nav`
 		text-decoration: underline;
 	}
 `;
-
-function NavBar() {
-	return (
-		<NavBarStyled>
-			<NavLink className='NavLink' activeClassName='active' to='/'>
-				Accueil
-			</NavLink>
-			<NavLink className='NavLink' activeClassName='active' to='/About'>
-				A Propos
-			</NavLink>
-		</NavBarStyled>
-	);
-}
-
-export default NavBar;

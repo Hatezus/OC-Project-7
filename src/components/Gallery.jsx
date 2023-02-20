@@ -1,24 +1,11 @@
+/*--------------------------------------------------[ Improts ]--------------------------------------------------*/
 import React from 'react';
 import styled from 'styled-components';
 import datas from '../utils/data';
 import Card from './Card';
 
-const GalleryStyled = styled.section`
-	display: flex;
-	flex-wrap: wrap;
-
-	justify-content: center;
-
-	gap: 50px;
-	background-color: #f7f7f7;
-	padding: 50px;
-	border-radius: 25px;
-	width: 96%;
-	margin: 0 auto;
-	margin-top: 40px;
-`;
-
-export default function Gallery() {
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
+const Gallery = () => {
 	return (
 		<GalleryStyled>
 			{datas.map((data) => {
@@ -33,4 +20,22 @@ export default function Gallery() {
 			})}
 		</GalleryStyled>
 	);
-}
+};
+export default Gallery;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
+const GalleryStyled = styled.section`
+	width: 96%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	gap: 50px;
+	padding: 50px;
+	border-radius: 25px;
+	margin: 0 auto;
+	margin-top: 40px;
+
+	background-color: #f7f7f7;
+`;

@@ -1,9 +1,23 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import styled from 'styled-components';
 
 import Logo from './Logo';
 import NavBar from './NavBar';
 
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
+function Header() {
+	return (
+		<HeaderStyled>
+			<Logo />
+			<NavBar />
+		</HeaderStyled>
+	);
+}
+
+export default Header;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
 const HeaderStyled = styled.header`
 	width: 100%;
 	height: 68px;
@@ -21,14 +35,3 @@ const HeaderStyled = styled.header`
 		margin-bottom: 10px;
 	}
 `;
-
-function Header() {
-	return (
-		<HeaderStyled>
-			<Logo />
-			<NavBar />
-		</HeaderStyled>
-	);
-}
-
-export default Header;

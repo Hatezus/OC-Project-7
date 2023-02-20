@@ -1,3 +1,4 @@
+/*--------------------------------------------------[ Imports ]--------------------------------------------------*/
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
@@ -7,60 +8,7 @@ import Header from '../components/header/Header';
 import TopSection from '../components/TopSection';
 import topImg from '../utils/images/img-aboutUs.png';
 
-const GlobalStyle = createGlobalStyle`
-*
-{
-    margin: 0;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    padding: 0;
-}
-
-a
-{
-    text-decoration: none;
-}
-
-body
-{
-    max-width: 1440px;
-    min-height: 100vh;
-	
-	margin: auto;
-    overflow-x: hidden;
-
-	display: flex;
-	flex-direction: column;
-
-}
-`;
-
-const DropDownContainer = styled.div`
-	width: 100%;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	padding-left: 2%;
-	padding-right: 2%;
-`;
-
-const AboutUsStyled = styled.main`
-	min-height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-`;
-
-const AboutUsSectionStyled = styled.section`
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-`;
-
+/*--------------------------------------------------[ Component ]--------------------------------------------------*/
 function AboutUs() {
 	return (
 		<AboutUsStyled>
@@ -94,3 +42,52 @@ function AboutUs() {
 }
 
 export default AboutUs;
+
+/*--------------------------------------------------[ Styles ]--------------------------------------------------*/
+const GlobalStyle = createGlobalStyle`
+*
+{
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body
+{
+    max-width: 1440px;
+    min-height: 100vh;
+	
+	margin: auto;
+    overflow-x: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+`;
+
+const DropDownContainer = styled.div`
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	padding-left: 2%;
+	padding-right: 2%;
+`;
+
+const AboutUsStyled = styled.main`
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+`;
+
+const AboutUsSectionStyled = styled.section`
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+`;
